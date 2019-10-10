@@ -2,6 +2,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// function getButtonText() {
+//     return 'Click on me!';
+// }
+
 // Create a react component (JSX)\
 
 // Tips
@@ -9,12 +13,17 @@ import ReactDOM from 'react-dom';
 // JSX  -> <button style={{backgroundColor: 'blue', color: 'white'}}>Submit</button>
 // Use className instead of class in JSX to avoid conflict or confusion with declaration.
 const App = () => {
+    const buttonText = { text: 'Click me'};
+    const labelText = 'Enter name: ';
+
     return (
         <div>
-            <label className="label" for="name">Enter name: </label>
+            <label className="label" htmlFor="name">
+                {labelText}
+            </label>
             <input id="name" type="text"/>
             <button style={{ backgroundColor: 'red', color: 'white' }}>
-                Submit
+                {buttonText.text}
             </button>
         </div>
     );
