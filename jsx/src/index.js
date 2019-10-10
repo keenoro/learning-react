@@ -2,12 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Create a react component
+// Create a react component (JSX)
 const App = () => {
     return <div>Hi there!</div>;
 };
 
-// Take the react component and show it on the screen
+// Take the react component and show it on the screen (DOM)
 ReactDOM.render(
     <App />,
     document.querySelector('#root')
