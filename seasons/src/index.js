@@ -25,6 +25,7 @@ class App extends React.Component {
 
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
+      //setState only modifies the selected properties and will not override other properties in the state
       (position) => this.setState({ lat: position.coords.latitude }),
       (err) => this.setState({ errorMessage: err.message })
       // DO NOT DO THIS!!
