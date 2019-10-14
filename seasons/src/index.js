@@ -32,8 +32,8 @@ class App extends React.Component {
     );
   }
 
-  // React says we have to define render!!
-  render() {
+  //Using helper functions can help reduce code duplication and wrapping things easily
+  renderContent() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
@@ -42,10 +42,18 @@ class App extends React.Component {
       return <SeasonDisplay lat={this.state.lat}/>
     }
 
-    return <Spinner />;
+    return <Spinner message="Please accept location request"/>;
+  }
+
+  // React says we have to define render!!
+  render() {
+    return (
+      <div className="border red">
+        {this.renderContent()}
+      </div>
+    );
   }
 }
-
 
 ReactDOM.render(
   <App />, document.querySelector('#root')
