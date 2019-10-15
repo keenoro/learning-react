@@ -21,8 +21,8 @@ class SearchBar extends React.Component {
     //Prevents page from refreshing itself due to function of form
     event.preventDefault();
 
-    console.log(this.state.term);
-  }
+    this.props.onSubmit(this.state.term);
+  };
 
   //Alternate form of event handler in JSX using arrow function
   //<input type="text" onChange={(e) => console.log(e.target.value)} />
