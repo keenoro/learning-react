@@ -1,3 +1,3 @@
-# learning-react
+# Learning React
 
-Learning how to use React Framework
+Learning the React Framework with redux, middleware, etc...
