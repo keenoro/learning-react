@@ -21,6 +21,10 @@ class StreamShow extends React.Component {
     this.buildPlayer();
   }
 
+  componentWillUnmount() {
+    this.player.destroy();
+  }
+
   // Check if the player is built or the stream is not fetched
   buildPlayer() {
     if (this.player || !this.props.stream ) {
